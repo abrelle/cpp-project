@@ -1,0 +1,36 @@
+
+
+
+### demo main
+rundemo : Demo.exe
+	./Demo.exe
+
+### test main
+runtest : Test.exe
+	./Test.exe
+
+rebuild : clean build
+
+build : Demo.txt Test.txt
+
+debug : -Wall += -DDEBUG
+debug: clean Test.exe
+	Test
+
+### executables
+Demo.exe : main.cpp Item.h Item.o Slot.h Slot.o Coins.h Coins.o
+	g++ -Wall main.cpp Item.o Slot.o Coins.o -o Demo.exe
+	
+Test.exe : mainTest.cpp Item.h Item.o Slot.h Slot.o Coins.h Coins.o
+	g++ -Wall mainTest.cpp Item.o Slot.o Coins.o -o Test.exe
+### object files
+Item.o : Item.cpp Item.h
+	g++ -Wall Item.cpp -c
+Slot.o : Slot.cpp Slot.h
+	g++ -Wall Slot.cpp -c
+Coins.o : Coins.cpp Coins.h
+	g++ -Wall Coins.cpp -c
+
+### clean all
+clean :
+	rm -f *.exe *.o

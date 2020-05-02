@@ -1,0 +1,23 @@
+class Item - testing started
+Item test 1 passed!
+Item test 2 passed!
+Item test 3 passed!
+Item test 4.1 passed!
+class Item - testing ended
+
+
+class Slot - testing started
+Item test 1 passed!  
+Item test 2.1 passed! Invalid number of items in slot
+Item test 2.2 passed! Invalid lenght of label.
+Item test 3 passed!  
+Item test 4.1 passed!  
+class Slot - testing ended
+
+
+class CashBox - testing started
+CashBox test 1 passed!  
+CashBox test 2.1 passed! Invalid number of 1euro coins
+CashBox test 3 passed!  
+CashBox test 4.1 passed!  
+class CashBox - testing ended
